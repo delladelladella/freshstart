@@ -1,19 +1,40 @@
 <!-- templates/index.html -->
-<h1> <center>Fresh Start </center> </h1>
+<html>
 
-<p> Which category best suits you bachelor's degree? </p>
+<head>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+    <title>Fresh Start</title>
+</head>
+<body>
 
-<input type = "radio" id= "Business" name = "College Degree" value= "Business"> 
-<label for=" Business">Business</label> <br>
+    <h1> <center>Fresh Start </center> </h1>
+    <form name="Question-Form" action="/" method="POST">
+        <div id="Degree-Choice">
+            <p> Which category best suits you bachelor's degree? </p>
 
-<input type = "radio" id= "Psychology" name = "College Degree" value= "Psychology"> 
-<label for=" Psychology">Psychology</label> <br>
+            <input type = "radio" id= "Business" name = "College Degree" value= "Business"> 
+            <label for=" Business">Business</label> <br>
 
-<input type = "radio" id= "Health Professions" name = "College Degree" value= "Health Professions"> 
-<label for=" Health Professions">Health Professions</label> <br>
+            <input type = "radio" id= "Psychology" name = "College Degree" value= "Psychology"> 
+            <label for=" Psychology">Psychology</label> <br>
 
-<input type = "radio" id= "Social Sciences / History" name = "College Degree" value= "Social Sciences / History"> 
-<label for=" Social Sciences / History">Social Sciences / History</label> <br>
+            <input type = "radio" id= "Health Professions" name = "College Degree" value= "Health Professions"> 
+            <label for=" Health Professions">Health Professions</label> <br>
 
-<input type = "radio" id= "Biological and Biomedical Science" name = "College Degree" value= "Biological and Biomedical Science"> 
-<label for=" Biological and Biomedical Science">Biological and Biomedical Sciences</label> <br>
+            <input type = "radio" id= "Social Sciences / History" name = "College Degree" value= "Social Sciences / History"> 
+            <label for=" Social Sciences / History">Social Sciences / History</label> <br>
+
+            <input type = "radio" id= "Biological and Biomedical Science" name = "College Degree" value= "Biological and Biomedical Science"> 
+            <label for=" Biological and Biomedical Science">Biological and Biomedical Sciences</label> <br>
+
+        </div>
+        <!--pressing the next button will pop up the next question and hide the last question-->
+        <!--the index.js file is where this functionality should be implemented-->
+        <button id="Next" type="button">Next</button> <br>
+        <!--this redirects the user to a page where they will submit their email along with their major-->
+        <a href="/NOTA">My field is not listed</a>
+    </form>
+
+</body>
+
+</html>
