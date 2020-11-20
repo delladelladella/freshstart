@@ -2,35 +2,67 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+
+    
+    
     <title>Fresh Start</title>
 </head>
 <body>
 
+ <!-- Commenting out index.js, interferes with alert method. 
+ <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}". 
+ -->
+ 
+     <script type="text/javascript">
+        
+     //Accessing value from selected major.    
+     function getRadioButtonValue(rbutton)
+      {
+        for (var i = 0; i < rbutton.length; ++i)
+        { 
+          if (rbutton[i].checked)
+            return rbutton[i].value;
+        }
+        return null;
+      }        
+ 
+ //Showing the message of where user should move too.        
+function myFunction() {
+  alert("You should move to: " +getRadioButtonValue(document.question["major"]));
+}        
+        
+    </script>
+
     <h1> <center>Fresh Start </center> </h1>
-    <form name="Question-Form" action="/" method="POST">
+    <form name="question" onSubmit = "JavaScript:myFunction()">
         <div id="Degree-Choice">
             <p> Which category best suits you bachelor's degree? </p>
 
-            <input type = "radio" id= "Business" name = "College Degree" value= "Business"> 
+            <input type = "radio" id= "Business" name = "major" value= "Miami, Florida"> 
             <label for=" Business">Business</label> <br>
 
-            <input type = "radio" id= "Psychology" name = "College Degree" value= "Psychology"> 
+            <input type = "radio" id= "Psychology" name = "major" value= "Dallas, Texas"> 
             <label for=" Psychology">Psychology</label> <br>
 
-            <input type = "radio" id= "Health Professions" name = "College Degree" value= "Health Professions"> 
+            <input type = "radio" id= "Health Professions" name = "major" value= "Alanta, Georgia"> 
             <label for=" Health Professions">Health Professions</label> <br>
 
-            <input type = "radio" id= "Social Sciences / History" name = "College Degree" value= "Social Sciences / History"> 
+            <input type = "radio" id= "Social Sciences / History" name = "major" value= "Boston, Massachusetts"> 
             <label for=" Social Sciences / History">Social Sciences / History</label> <br>
 
-            <input type = "radio" id= "Biological and Biomedical Science" name = "College Degree" value= "Biological and Biomedical Science"> 
+            <input type = "radio" id= "Biological and Biomedical Science" name = "major" value= "Seattle, Washington"> 
             <label for=" Biological and Biomedical Science">Biological and Biomedical Sciences</label> <br>
-
+            
+        
+            <input type = "submit" value= "submit" name = "SubmitButton">
+            
         </div>
         <!--pressing the next button will pop up the next question and hide the last question-->
         <!--the index.js file is where this functionality should be implemented-->
-        <button id="Next" type="button">Next</button> <br>
+        
+         <!-- Commenting out button, injex.js script interferes with alert method. 
+         <button id="Next" type="button">Next</button> <br>
+         
         <!--this redirects the user to a page where they will submit their email along with their major-->
         <a href="/NOTA">My field is not listed</a>
     </form>
