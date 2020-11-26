@@ -1,41 +1,15 @@
 <!-- templates/index.html -->
 <html>
-
-<head>
-
-    
-    
-    <title>Fresh Start</title>
-</head>
-<body>
-
- <!-- Commenting out index.js, interferes with alert method. 
- <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}". 
- -->
- 
-     <script type="text/javascript">
-        
-     //Accessing value from selected major.    
-     function getRadioButtonValue(rbutton)
-      {
-        for (var i = 0; i < rbutton.length; ++i)
-        { 
-          if (rbutton[i].checked)
-            return rbutton[i].value;
-        }
-        return null;
-      }        
- 
- //Showing the message of where user should move too.        
-function myFunction() {
-  alert("You should move to: " +getRadioButtonValue(document.question["major"]));
-}        
-        
-    </script>
-
-    <h1> <center>Fresh Start </center> </h1>
-    <form name="question" onSubmit = "JavaScript:myFunction()">
-        <div id="Degree-Choice">
+  <head>  
+      <title>Fresh Start</title>
+      <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+  </head>
+  <body>
+  <!--I put all the javascript in index.js-->
+      <h1> <center>Fresh Start </center> </h1>
+      <form name="question" onSubmit = "myFunction()">
+          <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice">
             <p> Which category best suits you bachelor's degree? </p>
 
             <input type = "radio" id= "Business" name = "major" value= "Miami, Florida"> 
@@ -53,20 +27,24 @@ function myFunction() {
             <input type = "radio" id= "Biological and Biomedical Science" name = "major" value= "Seattle, Washington"> 
             <label for=" Biological and Biomedical Science">Biological and Biomedical Sciences</label> <br>
             
-        
-            <input type = "submit" value= "submit" name = "SubmitButton">
+          </div>
+          <div id="Location-Choice" name="Location-Choice" class="Location-Choice">
+            <p> Are you located in the U.S.? </p>
+
+            <input type = "radio" id= "Location" name = "Loaction" value= "Yes"> 
+            <label for=" Location">Yes</label> <br>   
             
-        </div>
-        <!--pressing the next button will pop up the next question and hide the last question-->
-        <!--the index.js file is where this functionality should be implemented-->
-        
-         <!-- Commenting out button, injex.js script interferes with alert method. 
-         <button id="Next" type="button">Next</button> <br>
-         
-        <!--this redirects the user to a page where they will submit their email along with their major-->
-        <a href="/NOTA">My field is not listed</a>
-    </form>
+            <input type = "radio" id= "Location" name = "Loaction" value= "No"> 
+            <label for=" Location">No</label> <br> 
 
-</body>
+          </div>
+          <!--press the next button to see the next question-->
+          <input type = "button" id="Next-Button" value= "Next" name = "Next-Button" onClick="nextAndBack()" style="display: inline-block;">
+          <input type = "button" id="Submit-Button" value= "Submit" name = "Submit-Button" onClick="" style="display: none;">
+                    
+          <!--this redirects the user to a page where they will submit their email along with their major-->
+          <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
+      </form>
 
+  </body>
 </html>

@@ -1,1 +1,35 @@
-//question hiding functionality here
+//
+function getRadioButtonValue(rbutton){
+    for (var i = 0; i < rbutton.length; ++i){ 
+        if (rbutton[i].checked)
+        return rbutton[i].value;
+    }
+    return null;
+}
+
+function myFunction(){
+    alert("You should move to: " +getRadioButtonValue(document.question["major"]));
+}
+
+//Transitions to the next question and changes the button value
+function nextAndBack(){
+    var degree_questions = document.getElementById("Degree-Choice")
+    var location_question = document.getElementById("Location-Choice")
+    var next_back_button = document.getElementById("Next-Button")
+    var NOTA = document.getElementById("NOTA")
+    var submit_button = document.getElementById("Submit-Button")
+
+    if (degree_questions.style.display == "block"){
+        degree_questions.style.display = "none"
+        NOTA.style.display = "none"
+        location_question.style.display = "block"
+        next_back_button.value = "Back"
+        submit_button.style.display = "inline-block"
+    } else{
+        location_question.style.display = "none"
+        degree_questions.style.display = "block"
+        NOTA.style.display = "block"
+        next_back_button.value = "Next"
+        submit_button.style.display = "none"
+    }
+}
