@@ -1,4 +1,3 @@
-//
 function getRadioButtonValue(rbutton){
     for (var i = 0; i < rbutton.length; ++i){ 
         if (rbutton[i].checked)
@@ -8,7 +7,7 @@ function getRadioButtonValue(rbutton){
 }
 
 function myFunction(){
-    alert("You should move to: " +getRadioButtonValue(document.question["major"]));
+    //alert("You should move to: " +getRadioButtonValue(document.question["major"]));
 }
 
 //Transitions to the next question and changes the button value
@@ -32,4 +31,23 @@ function nextAndBack(){
         next_back_button.value = "Next"
         submit_button.style.display = "none"
     }
+}
+
+//fetch sending data to the server and receiving json data in response
+//then displaying that data
+function getData(){
+    //const axios = require('axios').default
+    var userMajor = document.querySelector("input[name='Major']:checked").value
+    var inTheUS = document.querySelector("input[name='Location']:checked").value
+    //axios is a javascript module that allows you to communicate with a server using javascript
+    axios.post('/',{// sends user's answers to the server
+        Major : userMajor,
+        Location : inTheUS
+    }).then((response) => {//gets back the response from the server
+        data = response.data
+        //for each record, create a tag and display them
+        for(i=0;i<data.length;i++){
+            console.log(data[i])
+        }
+    }).catch(error => console.log(error))
 }
