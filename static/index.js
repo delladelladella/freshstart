@@ -33,7 +33,7 @@ function nextAndBack(){
     }
 }
 
-//fetch sending data to the server and receiving json data in response
+//sends data to the server and receiving json data in response
 //then displaying that data
 function getData(){
     //const axios = require('axios').default
