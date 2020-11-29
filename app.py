@@ -24,7 +24,7 @@ def get_db():
 def query_db(major, in_USA):
     if in_USA.lower() == "yes":
         db = get_db().execute("SELECT * FROM LOCATION WHERE MAJOR='"+major+"' AND IN_THE_USA='"+in_USA.lower()+"';")
-    else:
+    else:#if user is looking abroad
         db = get_db().execute("SELECT * FROM LOCATION WHERE MAJOR='"+major+"' AND IN_THE_USA='"+in_USA.lower()+"';")
     db_data = db.fetchall()
     db.close()
