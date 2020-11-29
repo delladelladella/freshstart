@@ -74,8 +74,8 @@ def NOTA():
         major = flask.request.form['Major']
         #adds them to the database
         insert_db(email,major)
-        #sends back the thank you page
-        return flask.render_template("NOTA-Email-Submit.html")
+        #sends back the thanks.html
+        return flask.render_template("thanks.html")
     else:
         return flask.render_template("Error.html")
 

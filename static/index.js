@@ -46,6 +46,7 @@ function getData(){
     }).then((response) => {//gets back the response from the server
         data = response.data
         //for each record, create a tag and display them
+        var parentDiv = document.getElementById("Location-response")
         for(i=0;i<data.length;i++){
             console.log(data[i])
         }
