@@ -1,9 +1,9 @@
 # A Fresh Start
 
-A Fresh Start is a web application that suggests to college students possible places to move too after graduation based upon their major and whether or not they reside in the US. Salariesof jobs related to the college students major are also provided with the locations.
+A Fresh Start is a web application that suggests to college students possible places to move too after graduation based upon their major and whether or not they reside in the US. Salaries of jobs related to the college student's major are also provided with the locations.
 
 Who is A Fresh Start for?
-Recent college graduates looking to move to a different city. 
+Recent college graduates. 
 
 How is A Fresh Start installed?
 No installation is required, A Fresh Start is a web application. 
