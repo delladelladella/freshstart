@@ -8,43 +8,48 @@
   </head>
   <body>
   <!--I put all the javascript in index.js-->
-      <h1> <center>Fresh Start </center> </h1>
-      <form id="Questions" name="Questions" onSubmit = "myFunction()" method="POST">
+      <h1 class="Logo"> <center>Fresh Start </center> </h1>
+      <form id="Questions" name="Questions" onSubmit = "myFunction()" method="POST" class="Form">
           <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice">
             <p> Which category best suits you bachelor's degree? </p>
+            <div class="Choices1">
+              <input type = "radio" id= "Cyber Security" name = "Major" value= "Cyber Security"> 
+              <label for=" Cyber Security">Cyber Security</label> <br>
 
-            <input type = "radio" id= "Cyber Security" name = "Major" value= "Cyber Security"> 
-            <label for=" Cyber Security">Cyber Security</label> <br>
+              <input type = "radio" id= "Software Engineering" name = "Major" value= "Software Engineering"> 
+              <label for=" Software Engineering">Software Engineering</label> <br>
 
-            <input type = "radio" id= "Software Engineering" name = "Major" value= "Software Engineering"> 
-            <label for=" Software Engineering">Software Engineering</label> <br>
+              <input type = "radio" id= "Psychology" name = "Major" value= "Psychology"> 
+              <label for=" Psychology">Psychology</label> <br>
 
-            <input type = "radio" id= "Psychology" name = "Major" value= "Psychology"> 
-            <label for=" Psychology">Psychology</label> <br>
+              <input type = "radio" id= "Finance (Analyst)" name = "Major" value= "Finance (Analyst)"> 
+              <label for=" Finance (Analyst)">Finance (Analyst)</label> <br>
 
-            <input type = "radio" id= "Finance (Analyst)" name = "Major" value= "Finance (Analyst)"> 
-            <label for=" Finance (Analyst)">Finance (Analyst)</label> <br>
-
-            <input type = "radio" id= "Biomedical Engineering" name = "Major" value= "Biomedical Engineering"> 
-            <label for="Biomedical Engineering">Biomedical Engineering</label> <br>
+              <input type = "radio" id= "Biomedical Engineering" name = "Major" value= "Biomedical Engineering"> 
+              <label for="Biomedical Engineering">Biomedical Engineering</label> <br>
+            </div>
             
           </div>
           <div id="Location-Choice" name="Location-Choice" class="Location-Choice">
             <p> Are you located in the U.S.? </p>
-
-            <input type = "radio" id= "Location" name = "Location" value= "Yes"> 
-            <label for=" Location">Yes</label> <br>   
+            <div class="Choices2">
+              <input type = "radio" id= "Location" name = "Location" value= "Yes"> 
+              <label for=" Location">Yes</label> <br>   
+              
+              <input type = "radio" id= "Location" name = "Location" value= "No"> 
+              <label for=" Location">No</label> <br> 
+            </div>
             
-            <input type = "radio" id= "Location" name = "Location" value= "No"> 
-            <label for=" Location">No</label> <br> 
-
           </div>
           <!--press the next button to see the next question-->
-          <input type = "button" id="Next-Button" value= "Next" name = "Next-Button" onClick="nextAndBack()" style="display: inline-block;">
-          <button type = "button" id="Submit-Button"  name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
+          <div class="Buttons">
+            <input type = "button" id="Next-Button" value= "Next" name = "Next-Button" onClick="nextAndBack()" style="display: inline-block;">
+            <button type = "button" id="Submit-Button"  name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
                     
-          <!--this redirects the user to a page where they will submit their email along with their Major-->
-          <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
+            <!--this redirects the user to a page where they will submit their email along with their Major-->
+            <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
+          </div>
+          
       </form>
       <!--the suggested places the user should move to will go in this div-->
       <div id="Location-Response" class="Location-Response">
