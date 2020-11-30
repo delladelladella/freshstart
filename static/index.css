@@ -8,6 +8,10 @@ h1 {
 h2 {
     text-align: center;
 }
+
+h3 {
+    text-align: center;
+}
  
 body {
   background-image: url('path-wallpapers-4.jpg');
@@ -17,7 +21,6 @@ body {
 }
 
 .default-display {
-    display: block;
     border-radius: 25px;
     border: 5px solid rgb(103, 148, 54);
 	background-color:rgb(235, 242, 250);
@@ -40,7 +43,6 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 10%);
-    float: left;
 }
 
 .button:hover {
@@ -48,19 +50,31 @@ body {
     color: black;
 }
 
+.Choices1{
+    text-align: justify;
+    position: sticky;
+    margin-left: 36%;
+}
+
+.Choices2{
+    text-align: justify;
+    position: sticky;
+    margin-left: 46%;
+}
+
 
 .Welcome {
     display: block;
 }
 
-.Degree-Choice {
+.Degree-Choice{
     display: none;
 }
 
-.Location-Choice {
+.Location-Choice{
     display: none;
 }
 
-.Location-response {
+.Location-response{
     display: none;
 }

@@ -2,9 +2,9 @@
 <html>
   <head>  
       <title>A Fresh Start</title>
-      <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename = 'blue5.js') }}"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'blue14.css') }}">
   </head>
   <body>
   <!--I put all the javascript in index.js-->
@@ -16,9 +16,9 @@
         <h2>Let us find the best location for you after graduation<br><br>Just press Start to begin</h2>
       </div>
       <form id="Questions" name="Questions" onSubmit = "myFunction()" method="POST">
-          <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice default-display">
-            <p> Which category best suits you bachelor's degree? </p>
-
+        <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice default-display">
+          <h3> Which category best suits you bachelor's degree? </h3>
+          <div class="Choices1">
             <input type = "radio" id= "Cyber Security" name = "Major" value= "Cyber Security"> 
             <label for=" Cyber Security">Cyber Security</label> <br>
 
@@ -35,28 +35,25 @@
             <label for="Biomedical Engineering">Biomedical Engineering</label> <br><br><br>
             
             <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
-            
           </div>
-          <div id="Location-Choice" name="Location-Choice" class="Location-Choice default-display">
-            <p> Are you located in the U.S.? </p>
-
+        </div>
+        <div id="Location-Choice" name="Location-Choice" class="Location-Choice default-display">
+          <h3> Are you located in the U.S.? </h3>
+          <div class="Choices2">
             <input type = "radio" id= "Location" name = "Location" value= "Yes"> 
             <label for=" Location">Yes</label> <br>   
-            
+              
             <input type = "radio" id= "Location" name = "Location" value= "No"> 
             <label for=" Location">No</label> <br> 
-
           </div>
-          <!--press the next button to see the next question-->
-          <input type = "button" id="Next-Button" class="button" value= "Start" name = "Next-Button" onClick="nextAndBack()" style="display: block;">
-          <br><br><br><br>
-          <button type = "button" id="Submit-Button" class="button" name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
-                    
-          <!--this redirects the user to a page where they will submit their email along with their Major-->
+        </div>
       </form>
+      <input type="button" id="Next-Button" class="button" value="Start" name="Next-Button" onClick="nextAndBack()" style="display: inline-block;">
+      <br><br><br>
+      <button type="button" id="Submit-Button" class="button" name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
       <!--the suggested places the user should move to will go in this div-->
       <div id="Location-Response" class="Location-Response">
-        <h2>We recommend you checkout these cities</h2>
+        <!--index.js getData() fills in this div-->
       </div>
   </body>
 </html>

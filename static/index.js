@@ -12,13 +12,20 @@ function myFunction(){
 
 //Transitions to the next question and changes the button value
 function nextAndBack(){
+    var welcome = document.getElementById("Welcome")
     var degree_questions = document.getElementById("Degree-Choice")
     var location_question = document.getElementById("Location-Choice")
     var next_back_button = document.getElementById("Next-Button")
     var NOTA = document.getElementById("NOTA")
     var submit_button = document.getElementById("Submit-Button")
-
-    if (degree_questions.style.display == "block"){
+    
+    if (welcome.style.display == "block"){
+        location_question.style.display = "none"
+        degree_questions.style.display = "block"
+        NOTA.style.display = "block"
+        next_back_button.value = "Next"
+        submit_button.style.display = "none"
+    }else if (degree_questions.style.display == "block"){
         degree_questions.style.display = "none"
         NOTA.style.display = "none"
         location_question.style.display = "block"
@@ -52,6 +59,9 @@ function getData(){
         backButton.innerText = "Back"
         backButton.onclick = () => window.location.replace("http://localhost:8080")
         backButton.id = "Back-Button"
+        var h2Recommend = document.createElement("h2")
+        h2Recommend.innerText = "We recommend you checkout these cities for jobs in "+data[0].major+":"
+        parentDiv.appendChild(h2Recommend)
         for(i=0;i<data.length;i++){
             console.log(data[i])
 
