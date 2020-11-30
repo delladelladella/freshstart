@@ -1,16 +1,22 @@
 <!-- templates/index.html -->
 <html>
   <head>  
-      <title>Fresh Start</title>
+      <title>A Fresh Start</title>
       <script type="text/javascript" src="{{ url_for('static', filename = 'index.js') }}"></script>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
       <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
   </head>
   <body>
   <!--I put all the javascript in index.js-->
-      <h1> <center>Fresh Start </center> </h1>
+      <div class="header">
+         <h1>A Fresh Start</h1>
+      </div>
+      <div id="Welcome" class="default-display">
+        <h2> Welcome to A Fresh Start</h2>
+        <h2>Let us find the best location for you after graduation<br><br>Just press Start to begin</h2>
+      </div>
       <form id="Questions" name="Questions" onSubmit = "myFunction()" method="POST">
-          <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice">
+          <div id="Degree-Choice" name="Degree-Choice" class="Degree-Choice default-display">
             <p> Which category best suits you bachelor's degree? </p>
 
             <input type = "radio" id= "Cyber Security" name = "Major" value= "Cyber Security"> 
@@ -26,10 +32,12 @@
             <label for=" Finance (Analyst)">Finance (Analyst)</label> <br>
 
             <input type = "radio" id= "Biomedical Engineering" name = "Major" value= "Biomedical Engineering"> 
-            <label for="Biomedical Engineering">Biomedical Engineering</label> <br>
+            <label for="Biomedical Engineering">Biomedical Engineering</label> <br><br><br>
+            
+            <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
             
           </div>
-          <div id="Location-Choice" name="Location-Choice" class="Location-Choice">
+          <div id="Location-Choice" name="Location-Choice" class="Location-Choice default-display">
             <p> Are you located in the U.S.? </p>
 
             <input type = "radio" id= "Location" name = "Location" value= "Yes"> 
@@ -40,11 +48,11 @@
 
           </div>
           <!--press the next button to see the next question-->
-          <input type = "button" id="Next-Button" value= "Next" name = "Next-Button" onClick="nextAndBack()" style="display: inline-block;">
-          <button type = "button" id="Submit-Button"  name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
+          <input type = "button" id="Next-Button" class="button" value= "Start" name = "Next-Button" onClick="nextAndBack()" style="display: block;">
+          <br><br><br><br>
+          <button type = "button" id="Submit-Button" class="button" name="Submit-Button" style="display: none;" onClick="getData()">Submit</button>
                     
           <!--this redirects the user to a page where they will submit their email along with their Major-->
-          <a href="/NOTA" id="NOTA" style="display: block;">My field is not listed</a>
       </form>
       <!--the suggested places the user should move to will go in this div-->
       <div id="Location-Response" class="Location-Response">

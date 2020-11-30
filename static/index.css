@@ -1,11 +1,66 @@
-.Degree-Choice{
+h1 {
+  background-color: rgb(103, 148, 54);
+  color: white;
+  font-size: 100px;
+  text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+ 
+body {
+  background-image: url('path-wallpapers-4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: 100% 100%;
+}
+
+.default-display {
+    display: block;
+    border-radius: 25px;
+    border: 5px solid rgb(103, 148, 54);
+	background-color:rgb(235, 242, 250);
+    width: 40%;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: 1px solid green;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    float: left;
+}
+
+.button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.Welcome {
     display: block;
 }
 
-.Location-Choice{
+.Degree-Choice {
     display: none;
 }
 
-.Location-response{
+.Location-Choice {
+    display: none;
+}
+
+.Location-response {
     display: none;
 }
