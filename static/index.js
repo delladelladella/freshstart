@@ -52,6 +52,9 @@ function getData(){
         backButton.innerText = "Back"
         backButton.onclick = () => window.location.replace("http://localhost:8080")
         backButton.id = "Back-Button"
+        var h2Recommend = document.createElement("h2")
+        h2Recommend.innerText = "We recommend you checkout these cities for jobs in "+data[0].major
+        parentDiv.appendChild(h2Recommend)
         for(i=0;i<data.length;i++){
             console.log(data[i])
 
