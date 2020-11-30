@@ -1,8 +1,11 @@
 h1 {
   background-color: rgb(103, 148, 54);
+  border: 3px solid white;
   color: white;
   font-size: 100px;
   text-align: center;
+  border-radius: 25px;
+
 }
 
 h2 {
@@ -18,6 +21,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: 100% 100%;
+}
+
+.header {
+    background-color: grey;
+    border: 3px solid black;
+    font-size: 40px;
+    color: white;
+    border-radius: 25px;
+    padding: 2px;
 }
 
 .default-display {
@@ -61,7 +73,6 @@ body {
     position: sticky;
     margin-left: 46%;
 }
-
 
 .Welcome {
     display: block;

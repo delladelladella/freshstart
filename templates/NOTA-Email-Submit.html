@@ -1,14 +1,19 @@
 <!-- None of the above (NOTA) choice trasistions to this page-->
 
 <title>Submit Email</title>
-
-<h3>Sorry, we currently don't have suggestions for your field. Please leave your email along with your major and we'll let you know when suggestions for your field is available.</h3>
+<link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+<div class="header">
+  <h3>Sorry, we currently don't have suggestions for your field. Please leave your email along with your major and we'll let you know when suggestions for your field is available.</h3>
+</div>
 <form id="Email-Submit" method="POST">
-    <label for="Email">Email</label> <br>
-    <input id="Email" name="Email" type="email"></input> <br><br>
+    <div class="default-display">
+        <div class="Choices1">
+            <label for="Email">Email</label> <br>
+            <input id="Email" name="Email" type="email"></input> <br><br>
 
-    <label for="Major">Field/Degree</label> <br>
-    <input id="Major" name="Major" type="text"></input> <br><br>
-
-    <button type="submit">Submit</button>
+            <label for="Major">Field/Degree</label> <br>
+            <input id="Major" name="Major" type="text"></input> <br><br>            
+        </div>
+    </div>
+    <button class="button" type="submit">Submit</button>
 </form> 
