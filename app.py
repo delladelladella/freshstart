@@ -17,7 +17,8 @@ database_path = './FS_Database.db'
 def get_db():
     db = getattr(flask, '_database', None)
     if db is None:
-        db = flask._database = sqlite3.connect(database_path)
+        print("db call")
+        db = flask._database = sqlite3.connect(database_path, check_same_thread=False)
     return db
 
 #fetches data from the database based on the major the user selected and whether or not they are in the US

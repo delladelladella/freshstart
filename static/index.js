@@ -53,10 +53,12 @@ function getData(){
     }).then((response) => {//gets back the response from the server
         data = response.data
         //for each record, create a tag and display them
+        var domBody = document.getElementsByTagName("BODY")[0]
         var parentDiv = document.getElementById("Location-Response")
         var backButton = document.createElement("button")
         backButton.type = "button"
         backButton.innerText = "Back"
+        backButton.className = "button"
         backButton.onclick = () => window.location.replace("http://localhost:8080")
         backButton.id = "Back-Button"
         var h2Recommend = document.createElement("h2")
@@ -77,7 +79,7 @@ function getData(){
             salaryRChildElement.innerText = "Salary range (entry level): "+data[i].salary_range
             parentDiv.appendChild(salaryRChildElement)
         }
-        parentDiv.appendChild(backButton)
+        domBody.appendChild(backButton)
         var currentWindow = document.getElementById("Location-Choice")
         currentWindow.style.display = "none"
         var button1 = document.getElementById("Next-Button")

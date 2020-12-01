@@ -24,9 +24,10 @@ body {
 }
 
 .header {
-    background-color: grey;
-    border: 3px solid black;
-    font-size: 40px;
+    position: sticky;
+    background-color: rgb(103, 148, 54);
+    border: 3px solid white;
+    font-size: 30px;
     color: white;
     border-radius: 25px;
     padding: 2px;
@@ -88,4 +89,19 @@ body {
 
 .Location-response{
     display: none;
+    border-radius: 25px;
+    border: 5px solid rgb(103, 148, 54);
+	background-color:rgb(235, 242, 250);
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+    padding: 20px;
+    text-align: center;
+}
+
+.Email-h3{
+    background-color: rgb(103, 148, 54);
+    text-align: center;
+
 }
