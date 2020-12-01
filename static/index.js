@@ -20,6 +20,7 @@ function nextAndBack(){
     var submit_button = document.getElementById("Submit-Button")
     
     if (welcome.style.display == "block"){
+        welcome.style.display = "none"
         location_question.style.display = "none"
         degree_questions.style.display = "block"
         NOTA.style.display = "block"
