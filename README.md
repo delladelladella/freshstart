@@ -17,5 +17,5 @@ Rose Oliver, Jaiye Agbonavbare, & Della Mbaacha.
 
 To Run the web app:
 - Using a terminal/command prompt, proceed to the directory in which the files of freshstart are located.
-- Enter python3 app.py into the terminal and press enter
-- In your browser, type in the url localhost:8080 and press enter
+- Enter `python3 app.py` into the terminal and press enter
+- In your browser, type in the url `localhost:8080` and press enter
